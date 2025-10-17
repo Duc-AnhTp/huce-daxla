@@ -1,9 +1,6 @@
-# huce-do-an-xu-ly-anh
-HUCE - Đồ Án Xử Lý Ảnh - 608810 - Nhóm 99 
+# Đồ án Xử lý ảnh - 608810 - HUCE - Nhóm 16
 
 # 🌰 Đề tài:
 Khôi phục ảnh bị nhiễu và mờ bằng các bộ lọc khôi phục <br> (Restoration Filters: Inverse, Wiener, và Median)
 
-## 🚀 Cách chạy
-...
 
