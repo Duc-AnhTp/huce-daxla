@@ -7,11 +7,10 @@
 |------------|------|------|
 | Nguyễn Thu Hương | 68CS2 | 0209168 |
 | Trần Phùng Đức Anh | 68CS2 | 0204168 |
-| Nguyễn Lý Tiền | 68CS2 | 0213768 |
-| Đào Ngọc Long | 68CS2 | 0210268 |
+| Trịnh Tuấn Anh | 68CS2 | 0204368 |
 
-**Giảng viên hướng dẫn:** Phạm Hồng Phong  
-**Thời gian:** Hà Nội, tháng 4 năm 2025  
+**Giảng viên hướng dẫn:** Đào Việt Cường  
+**Thời gian:** Hà Nội, tháng 10 năm 2025  
 
 ---
 
