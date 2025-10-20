@@ -18,9 +18,9 @@
 
 ### 1. Mô hình suy giảm ảnh
 Ảnh quan sát \( g(x,y) \) được mô tả bằng mô hình:
-\[
+$$
 g(x,y) = h(x,y) * f(x,y) + \eta(x,y)
-\]
+$$
 Trong đó:
 - \( f(x,y) \): ảnh gốc  
 - \( h(x,y) \): hàm lan truyền điểm (PSF – Point Spread Function)  
@@ -31,9 +31,9 @@ Trong đó:
 
 ### 2. Mô hình trong miền tần số
 Dùng biến đổi Fourier 2 chiều:
-\[
+$$
 G(u,v) = H(u,v)F(u,v) + N(u,v)
-\]
+$$
 - \( G(u,v) \): phổ ảnh quan sát  
 - \( H(u,v) \): hàm truyền hệ thống  
 - \( F(u,v) \): phổ ảnh gốc  
@@ -45,10 +45,9 @@ G(u,v) = H(u,v)F(u,v) + N(u,v)
 
 ### 1. Lọc nghịch đảo (Inverse Filter)
 Công thức cơ bản:
-\[
+$$
 \hat{F}(u,v) = \frac{G(u,v)}{H(u,v)} = F(u,v) + \frac{N(u,v)}{H(u,v)}
-\]
-
+$$
 Khi \( H(u,v) \) nhỏ → nhiễu bị khuếch đại.  
 Giải pháp: thêm hệ số điều chỉnh (Regularized Inverse Filter)
 \[
