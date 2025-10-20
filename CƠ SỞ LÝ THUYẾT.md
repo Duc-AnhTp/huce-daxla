@@ -1,3 +1,4 @@
+usemathjax: true
 # 🎯 Báo cáo môn học: Xử lý ảnh số  
 ## Đề tài: Khôi phục ảnh bị nhiễu và mờ bằng các bộ lọc Inverse, Wiener, và Median  
 
