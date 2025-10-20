@@ -94,3 +94,81 @@ Là bộ lọc phi tuyến trong miền không gian:
 
 **Cách xử lý:**  
 Chỉ khôi phục trên kênh độ sáng → tránh biến đổi màu sai lệch:
+
+
+---
+
+## IV. Thang đo đánh giá chất lượng
+
+### 1. Thang đo định lượng
+- **MSE (Mean Square Error):**
+  \[
+  MSE = \frac{1}{MN} \sum_{x,y} [f(x,y) - \hat{f}(x,y)]^2
+  \]
+- **PSNR (Peak Signal-to-Noise Ratio):**
+  \[
+  PSNR = 10 \log_{10}\left(\frac{L^2}{MSE}\right)
+  \]
+  Với \( L = 255 \) (ảnh 8-bit).  
+  → PSNR càng cao → ảnh càng tốt.
+
+### 2. Thang đo định tính
+- Biên ảnh rõ hơn  
+- Nhiễu giảm tự nhiên  
+- Cấu trúc hình học bảo toàn  
+- Đánh giá qua Sobel hoặc Canny
+
+### 3. Bảng tiêu chí tổng hợp
+
+| Tiêu chí | Thang đo | Giải thích |
+|-----------|-----------|-------------|
+| Độ chính xác khôi phục | PSNR (dB) | >30: tốt; 25–30: TB; <25: kém |
+| Sai số trung bình | MSE | Càng nhỏ càng tốt |
+| Độ sắc nét biên | Gradient/Canny | Biên rõ → tốt |
+| Độ tự nhiên hình ảnh | MOS (1–5) | 1: xấu – 5: tốt |
+| Tốc độ xử lý | Thời gian tính toán | Đo hiệu năng thuật toán |
+
+---
+
+## V. Dự đoán kết quả
+
+| Bộ lọc | Kết quả kỳ vọng | Ghi chú |
+|--------|------------------|---------|
+| **Inverse Filter** | Khôi phục mờ nhẹ tốt, nhưng dễ nhiễu | Phụ thuộc vào \( H(u,v) \) |
+| **Wiener Filter** | Ổn định, PSNR cao, giảm mờ và nhiễu | Tối ưu MSE |
+| **Median Filter** | Hiệu quả với nhiễu muối tiêu | Giữ biên tốt |
+
+**Dự kiến:**  
+- PSNR: 28–35 dB  
+- Giảm nhiễu rõ rệt  
+- Biên ảnh sắc nét hơn  
+- Wiener Filter cho kết quả tối ưu nhất  
+
+---
+
+## VI. Kết luận sơ bộ
+
+**Đề tài:** *Khôi phục ảnh bị nhiễu và mờ bằng các bộ lọc Inverse, Wiener, Median*  
+Là sự tổng hợp của các chương:
+
+| Chương | Nội dung liên quan |
+|--------|--------------------|
+| **Chương 2** | Mô hình hóa và biến đổi Fourier |
+| **Chương 3** | Các bộ lọc khôi phục ảnh |
+| **Chương 4** | Không gian màu và in ảnh |
+| **Chương 5** | Đánh giá PSNR, phát hiện biên |
+
+**Kết luận sơ bộ:**
+- **Wiener Filter:** hiệu quả nhất, ổn định.  
+- **Median Filter:** phù hợp ảnh nhiễu xung.  
+- **Inverse Filter:** tốt khi PSF biết chính xác và nhiễu nhỏ.  
+
+---
+
+> 📘 *Tài liệu tham khảo:*
+> - Slide 2–5: Xử lý ảnh số – Bộ môn XLA, Khoa CNTT, ĐHXD.  
+> - Gonzalez & Woods, *Digital Image Processing*, 4th Edition.  
+> - MATLAB Image Processing Toolbox Documentation.
+
+---
+
